@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Classic Convo</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="./style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +11,7 @@
     <body class="all">
         <header>
             <h1 id="nameSite"><img class="logo" src="./imagens/chat-text-fill.svg" alt="Classic Convo's logo"> Classic Convo</h1>
-            <nav class="menu col-lg-3 col-md-3 col-sm-12">
+            <nav class="menu">
                 <ul class="listMenu">
                     <li><a  href=""><img class="imgMenu1" src="./imagens/chat-text.svg" alt="Message bubble"></a></li>
                     <li><a  href=""><img class="imgMenu2" src="./imagens/person-lines-fill.svg" alt="Image to exemplify contacts"></a> </li>
@@ -21,19 +20,35 @@
             </nav>
         </header>
         <main>
-            <div>
-                <h2 id="userName">Person 1</h2>
-            </div>
-            <div class="historic">
-                <textarea>Write your message</textarea>
-                <button class="send"><img src="./imagens/arrow-right-circle.svg" alt="arrow"></button>
-            </div>
-            <div class="change">
-                <button><a href="./changeUser.html">Change User</a></button>
+            <div id="carousel">
+                <div class="carouselInner">
+                    <div class="carousel-item">
+                        <h2 id="userName">User 1</h2>
+                        <div class="historic">
+                            <textarea>Write your message</textarea>
+                            <button class="send"><img src="./imagens/arrow-right-circle.svg" alt="arrow"></button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div id="sdUser">
+                            <div>
+                                <h2 id="sdUserName">User 2</h2>
+                            </div>
+                            <div class="sdHistoric">    
+                                <textarea>Write your message</textarea>
+                                <button class="sdSend"><img src="./imagens/arrow-right-circle.svg" alt="arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control">
+                    <button class="change carouselControl">Change User</button>
+                </div>
             </div>
         </main>
         <footer>
             <p>Copyright &copy; 2024 Classic Convo</p>
         </footer>
+        <script src="./index.js" charset="UTF-8"></script>
     </body>
 </html>
