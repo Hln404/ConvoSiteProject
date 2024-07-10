@@ -73,15 +73,25 @@
 .carouselInner{
     display: flex;
     flex: 1 0 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .carousel-item{
     display: flex;
     flex: 1 0 100%;
+    margin-right: 30vw;
+    margin-left: 10vw;
     margin-bottom: 15%;
-    margin-left: 10%;
+}
+
+.SD{
+    max-width: 70vw;
+    margin-right: 60vw;
+}
+
+.sdItem{
+    display: none;
 }
 
 #userName, #sdUserName{
@@ -89,10 +99,10 @@
     font-weight: 400;
     font-style: normal;
     margin: 0 0 -5vh 0;
-    max-height: 1rem;
+    max-height: 0.5rem;
     position: absolute;
     display: flex;
-    flex: 1 0;
+    flex: 1;
 }
 
 .historic, .sdHistoric{
@@ -108,6 +118,34 @@
     height:40vh;
     width: 100%;
     background-color:#c2b4a7;
+}
+
+.chat, .sdChat{
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1 0 70vw;
+    padding: 0.5rem;
+    margin-right: 25vw;
+    margin-top: 5vh;
+    height:40vh;
+    width: 100%;
+}
+
+.balloon, .sdBallon {
+    background-color: #BFA89E;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70%;
+    color: #686868;
+}
+
+.sdBallon{
+    background-color: #a28c82;
 }
 
 textarea{
