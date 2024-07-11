@@ -1,6 +1,6 @@
 var writing = document.querySelectorAll("textarea");
-var chat = document.querySelector(".chat");
-var sdChat = document.querySelector(".sdChat");
+var chat = document.querySelector("#chat");
+var sdChat = document.querySelector("#sdChat");
 
 var carouselInner = document.querySelector(".carouselInner");
 var carouselItems = document.querySelectorAll(".carousel-item");
@@ -20,17 +20,28 @@ function cleanText() {
     }
 }
 
-function addBalloon(boxText){
+function addBalloonForUser(boxText, userInfo){
+    var chatUser1Balloon = createBalloon(boxText, userInfo);
+    var chatUser2Balloon = createBalloon(boxText, userInfo);
+    chat.appendChild(chatUser1Balloon);
+    sdChat.appendChild(chatUser2Balloon);
+}
+
+function createBalloon(boxText,user)
+{
     var balloon = document.createElement("div");
     balloon.className = "balloon";
-    balloon.innerText = boxText;
-    chat.appendChild(balloon);
+    balloon.innerText = `${user}: ${boxText}`;
+
+    return balloon;
 }
 
 function enter(){
     var text = writing[0].value.trim();
+    // TODO: Figure out which user is going to send the message
+    var user = "User 1";
     if(text){
-        addBalloon(text);
+        addBalloonForUser(text,user);
         writing[0].value = "";
     }
 }
